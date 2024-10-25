@@ -14,6 +14,7 @@ exports.startMatch = async (
     )
         .then((question) => {
             if (question) {
+                console.log('question', question);
                 const roomId = crypto.randomUUID(); // generate unique room ID
                 rooms.set(roomId, {
                     questionId: question._id,
